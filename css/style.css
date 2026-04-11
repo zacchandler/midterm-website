@@ -1,0 +1,397 @@
+/* ===== Tag Styling (3 minimum) ===== */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0b0d17;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #7eb8ff;
+    margin-bottom: 10px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #2a2d3a;
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===== Header ===== */
+
+header {
+    background-color: #10122b;
+    text-align: center;
+    padding: 30px 20px 10px 20px;
+    border-bottom: 2px solid #1e2040;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #7eb8ff;
+    margin: 0;
+}
+
+header p {
+    color: #9a9fbf;
+    margin: 5px 0 15px 0;
+}
+
+/* ===== Gridded Nav ===== */
+
+.grid-nav {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.nav-link {
+    background-color: #1a1d35;
+    color: #c0c5e0;
+    padding: 10px;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #2c3060;
+}
+
+.nav-link.active {
+    background-color: #3b5998;
+    color: #ffffff;
+}
+
+/* ===== Class: Hero Section ===== */
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #10122b, #0b0d17);
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 10px auto;
+    font-size: 1.1rem;
+    color: #b0b5d0;
+}
+
+/* ===== Class: Button ===== */
+
+.btn {
+    background-color: #3b5998;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #4a6db5;
+}
+
+/* ===== Class: Fact Text ===== */
+
+.fact-text {
+    font-style: italic;
+    color: #ffd700;
+    font-size: 1.15rem;
+    min-height: 30px;
+    margin-top: 15px;
+}
+
+/* ===== Sections General ===== */
+
+section {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+section > p {
+    text-align: center;
+    color: #9a9fbf;
+    max-width: 700px;
+    margin: 0 auto 25px auto;
+}
+
+/* ===== Grid Section 1: Planets ===== */
+
+.grid-planets {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.planet-card {
+    background-color: #151730;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #1e2040;
+}
+
+.planet-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(126, 184, 255, 0.2);
+}
+
+.planet-card h3 {
+    color: #7eb8ff;
+    margin: 10px 0 5px 0;
+}
+
+.planet-back {
+    display: none;
+    color: #c0c5e0;
+    font-size: 0.9rem;
+    padding: 10px 0;
+}
+
+.planet-card.flipped img {
+    display: none;
+}
+
+.planet-card.flipped .planet-back {
+    display: block;
+}
+
+/* ===== Grid Section 2: Gallery ===== */
+
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grid-gallery figure {
+    margin: 0;
+    background-color: #151730;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #1e2040;
+}
+
+.grid-gallery figcaption {
+    padding: 12px;
+    font-size: 0.9rem;
+    color: #9a9fbf;
+    text-align: center;
+}
+
+/* ===== Missions Grid ===== */
+
+.grid-missions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.mission-card {
+    background-color: #151730;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #1e2040;
+}
+
+.mission-card h3 {
+    color: #7eb8ff;
+    margin-top: 0;
+}
+
+/* ===== Contact / Form ===== */
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    color: #9a9fbf;
+    font-size: 0.95rem;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #2a2d3a;
+    border-radius: 6px;
+    background-color: #151730;
+    color: #e0e0e0;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3b5998;
+}
+
+#form-message {
+    text-align: center;
+    color: #4caf50;
+    font-weight: bold;
+}
+
+/* ===== Footer ===== */
+
+footer {
+    text-align: center;
+    padding: 25px 20px;
+    background-color: #10122b;
+    color: #6a6f8a;
+    border-top: 1px solid #1e2040;
+    font-size: 0.9rem;
+}
+
+/* ===== Light Mode ===== */
+
+body.light-mode {
+    background-color: #f0f2f5;
+    color: #222222;
+}
+
+body.light-mode header {
+    background-color: #d6e4f7;
+    border-bottom-color: #b0c4de;
+}
+
+body.light-mode header h1 {
+    color: #2c4a7c;
+}
+
+body.light-mode header p {
+    color: #555;
+}
+
+body.light-mode h2 {
+    color: #2c4a7c;
+}
+
+body.light-mode .nav-link {
+    background-color: #c4d7f0;
+    color: #333;
+}
+
+body.light-mode .nav-link:hover {
+    background-color: #a8c4e0;
+}
+
+body.light-mode .nav-link.active {
+    background-color: #3b5998;
+    color: #fff;
+}
+
+body.light-mode .hero {
+    background: linear-gradient(to bottom, #d6e4f7, #f0f2f5);
+}
+
+body.light-mode .hero p {
+    color: #555;
+}
+
+body.light-mode .planet-card,
+body.light-mode .grid-gallery figure,
+body.light-mode .mission-card {
+    background-color: #ffffff;
+    border-color: #d0d5e0;
+}
+
+body.light-mode .planet-card h3,
+body.light-mode .mission-card h3 {
+    color: #2c4a7c;
+}
+
+body.light-mode input {
+    background-color: #ffffff;
+    color: #222;
+    border-color: #c0c5d0;
+}
+
+body.light-mode footer {
+    background-color: #d6e4f7;
+    color: #555;
+    border-top-color: #b0c4de;
+}
+
+body.light-mode section > p {
+    color: #555;
+}
+
+body.light-mode .fact-text {
+    color: #b8860b;
+}
+
+body.light-mode hr {
+    border-top-color: #c0c5d0;
+}
+
+/* ===== Responsiveness ===== */
+
+@media (max-width: 900px) {
+    .grid-planets {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-missions {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-nav {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .grid-planets {
+        grid-template-columns: 1fr;
+    }
+    .grid-gallery {
+        grid-template-columns: 1fr;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Beyond Earth - Space Exploration</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Chandler">
+        <meta name="description" content="A website about space exploration and the wonders of the universe">
+        <meta name="keywords" content="space, planets, exploration, nasa, universe">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <header>
+            <h1>Beyond Earth</h1>
+            <p>Exploring the Wonders of Our Universe</p>
+            <nav class="grid-nav">
+                <a href="#home" class="nav-link active" onclick="setActive(this)">Home</a>
+                <a href="#planets" class="nav-link" onclick="setActive(this)">Planets</a>
+                <a href="#gallery" class="nav-link" onclick="setActive(this)">Gallery</a>
+                <a href="#missions" class="nav-link" onclick="setActive(this)">Missions</a>
+                <a href="#contact" class="nav-link" onclick="setActive(this)">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+
+            <!-- Hero Section -->
+            <section id="home" class="hero">
+                <h2>The Final Frontier</h2>
+                <p>Space is not just a place above us. It is a vast, mysterious expanse filled with billions of galaxies,
+                    each containing billions of stars. Humanity has only scratched the surface of what lies beyond our atmosphere.</p>
+                <button id="fact-btn" class="btn" onclick="showFact()">Show Me a Space Fact</button>
+                <p id="fact-display" class="fact-text"></p>
+            </section>
+
+            <!-- Planets Grid Section -->
+            <section id="planets">
+                <h2>Our Solar System</h2>
+                <p>The eight planets of our solar system each have their own unique characteristics. Click on any planet card to learn more!</p>
+                <div class="grid-planets">
+                    <div class="planet-card" onclick="flipCard(this)">
+                        <img src="images/mars.jpg" alt="The planet Mars showing its red surface">
+                        <h3>Mars</h3>
+                        <p class="planet-back">Mars is called the Red Planet. It has the tallest volcano in the solar system - Olympus Mons, standing at 72,000 feet!</p>
+                    </div>
+                    <div class="planet-card" onclick="flipCard(this)">
+                        <img src="images/jupiter.jpg" alt="The planet Jupiter with its great red spot">
+                        <h3>Jupiter</h3>
+                        <p class="planet-back">Jupiter is the largest planet. Its Great Red Spot is a storm that has been raging for over 350 years!</p>
+                    </div>
+                    <div class="planet-card" onclick="flipCard(this)">
+                        <img src="images/saturn.jpg" alt="The planet Saturn with its iconic rings">
+                        <h3>Saturn</h3>
+                        <p class="planet-back">Saturn's rings are made of ice and rock. The planet is so light it could float in water if there was a bathtub big enough!</p>
+                    </div>
+                    <div class="planet-card" onclick="flipCard(this)">
+                        <img src="images/earth.jpg" alt="Planet Earth seen from space showing blue oceans">
+                        <h3>Earth</h3>
+                        <p class="planet-back">Earth is the only planet known to support life. It is 4.5 billion years old and 71% of its surface is covered in water.</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- Image Gallery Section -->
+            <section id="gallery">
+                <h2>Space Gallery</h2>
+                <p>Beautiful images captured from telescopes and space missions around the world.</p>
+                <div class="grid-gallery">
+                    <figure>
+                        <img src="images/nebula.jpg" alt="A colorful nebula with swirling gas clouds in deep space">
+                        <figcaption>The Carina Nebula - a stellar nursery where new stars are born</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/astronaut.jpg" alt="An astronaut floating in space with Earth in the background">
+                        <figcaption>Spacewalk - astronauts work outside the International Space Station</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/mars.jpg" alt="The surface of Mars showing red terrain">
+                        <figcaption>The Martian landscape - our next destination for human exploration</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/jupiter.jpg" alt="Close up view of Jupiter atmosphere">
+                        <figcaption>Jupiter's atmosphere - swirling storms larger than Earth</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/saturn.jpg" alt="Saturn and its beautiful ring system">
+                        <figcaption>Saturn's rings - billions of particles of ice and rock</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/earth.jpg" alt="Earth from space at night showing city lights">
+                        <figcaption>Our home planet - the pale blue dot</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- Missions Section -->
+            <section id="missions">
+                <h2>Famous Space Missions</h2>
+                <div class="grid-missions">
+                    <article class="mission-card">
+                        <h3>Apollo 11</h3>
+                        <p><strong>Year:</strong> 1969</p>
+                        <p>The first mission to land humans on the Moon. Neil Armstrong and Buzz Aldrin walked on the lunar surface while Michael Collins orbited above.</p>
+                    </article>
+                    <article class="mission-card">
+                        <h3>Voyager 1</h3>
+                        <p><strong>Year:</strong> 1977</p>
+                        <p>Launched in 1977, Voyager 1 is now the farthest human-made object from Earth. It carries a golden record with sounds and images of life on Earth.</p>
+                    </article>
+                    <article class="mission-card">
+                        <h3>Mars Perseverance</h3>
+                        <p><strong>Year:</strong> 2020</p>
+                        <p>NASA's rover is exploring Mars, searching for signs of ancient life and collecting rock samples for future return to Earth.</p>
+                    </article>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- Contact / Theme Section -->
+            <section id="contact">
+                <h2>Stay Connected</h2>
+                <p>Want to stay updated on space news? Toggle dark mode or sign up below!</p>
+                <button id="theme-btn" class="btn" onclick="toggleTheme()">Toggle Dark Mode</button>
+                <form onsubmit="handleSubmit(event)">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn">Sign Up</button>
+                </form>
+                <p id="form-message"></p>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>Beyond Earth &copy; 2026 | Built for Front End Midterm</p>
+        </footer>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
